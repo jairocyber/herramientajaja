@@ -14,7 +14,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pyinstaller requests browser_cookie3
     - name: Build
-      run: pyinstaller --noconsole --onefile --icon=icon.ico --name="Calculadora_Profit_DiosesMC" main.py
+      run: pyinstaller --noconsole --onefile --icon="icon.ico" --add-data "icon.ico;." --name="Calculadora_Profit_DiosesMC" main.py
     - name: Upload
       uses: actions/upload-artifact@v4
       with:
